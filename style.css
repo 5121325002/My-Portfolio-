@@ -102,4 +102,4 @@ h2 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 2.8rem); margin
 .hero-cta { flex-direction: column; }
 .btn { width: 100%; justify-content: center; }
 .status-badge { display: none; }
-}
+} 
