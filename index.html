@@ -4,14 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="description" content="Ayesha Aqeel — Software Engineering Student at Ibadat International University Islamabad. GPA 4.0 | Java, C++, Web Development. Open to Internships.">
-<meta name="keywords" content="Ayesha Aqeel, Software Engineer, IIUI, Java, Portfolio">
 <meta name="author" content="Ayesha Aqeel">
-<meta property="og:title" content="Ayesha Aqeel | Software Engineering Student">
-<meta property="og:description" content="Ibadat International University Islamabad | GPA 4.0 | Java, C++, Web Dev | Open to Internships">
-<meta property="og:image" content="profile.jpg">
-<meta property="og:url" content="https://5121325002.github.io/My-Portfolio-/">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
 <title>Ayesha Aqeel | Software Engineering Student | IIUI</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -26,12 +19,11 @@
     <a href="#home" class="logo">AA<span class="sparkle">✨</span></a>
     <nav class="nav-links" id="navLinks">
       <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a>
-      <a href="#projects">Projects</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
+      <a href="#projects">Projects</a><a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
       <span class="status-badge glass"><span class="dot-pulse"></span> Open to Internships</span>
       <button class="theme-toggle sparkle-btn" aria-label="Toggle theme"><span>☀️</span></button>
-      <button class="hamburger sparkle-btn" id="hamburger" aria-label="Menu"><span>☰</span></button>
     </div>
   </div>
 </header>
@@ -80,13 +72,13 @@
   </section>
 
   <section id="skills" class="section">
-    <p class="eyebrow reveal">03 — Skills</p>
+    <p class="eyebrow reveal">03 — Skills & Concepts</p>
     <h2 class="reveal">Technical Skills</h2>
     <div class="skills-grid">
-      <div class="skill-card glass reveal"><h4>Java</h4><p>OOP, Swing, File I/O</p></div>
-      <div class="skill-card glass reveal"><h4>C++</h4><p>Data Structures, File Handling</p></div>
-      <div class="skill-card glass reveal"><h4>Web</h4><p>HTML, CSS, JavaScript</p></div>
-      <div class="skill-card glass reveal"><h4>Tools</h4><p>Git, GitHub, VS Code</p></div>
+      <div class="skill-card glass reveal"><h4>Languages</h4><p>Java, C++, HTML, CSS, JavaScript, SQL</p></div>
+      <div class="skill-card glass reveal"><h4>Concepts</h4><p>OOP, Data Structures, Algorithms, File Handling</p></div>
+      <div class="skill-card glass reveal"><h4>Web</h4><p>Responsive Design, DOM, Git, GitHub</p></div>
+      <div class="skill-card glass reveal"><h4>Tools</h4><p>VS Code, Swing, JDBC</p></div>
     </div>
   </section>
 
@@ -105,8 +97,8 @@
       <div class="project-row glass reveal">
         <div>
           <div class="project-title">Student Record Management</div>
-          <div class="project-desc">Console C++ app for managing student grades with file handling</div>
-          <div class="tags"><span>C++</span><span>File Handling</span>
+          <div class="project-desc">Console C++ app for managing student grades with file handling + Data Structures</div>
+          <div class="tags"><span>C++</span><span>Data Structures</span><span>File Handling</span>
           <a href="https://github.com/5121325002/Student-Record-Management-system-" target="_blank" class="mini-btn sparkle-btn"><span>⭐ GitHub</span></a></div>
         </div>
       </div>
@@ -121,19 +113,8 @@
     </div>
   </section>
 
-  <section id="certs" class="section">
-    <p class="eyebrow reveal">05 — Certifications</p>
-    <h2 class="reveal">Continuous Learning</h2>
-    <div class="cert-row">
-      <div class="cert-card glass reveal">Generative AI: Prompt Engineering<br><small>IBM</small></div>
-      <div class="cert-card glass reveal">Introduction to Software Engineering<br><small>IBM</small></div>
-      <div class="cert-card glass reveal">HTML, CSS & JavaScript<br><small>IBM</small></div>
-      <div class="cert-card glass reveal">Cyber Security Manager<br><small>Macquarie University</small></div>
-    </div>
-  </section>
-
   <section id="contact" class="section">
-    <p class="eyebrow reveal">06 — Contact</p>
+    <p class="eyebrow reveal">05 — Contact</p>
     <h2 class="reveal">Let's Connect</h2>
     <div class="contact-grid reveal">
       <a href="mailto:5121325002@student.iiui.edu.pk" class="contact-btn glass"><span class="icon">✉️</span><div><strong>IIUI Email</strong><small>5121325002@student.iiui.edu.pk</small></div></a>
@@ -153,21 +134,33 @@
       <button class="mini-btn sparkle-btn" id="editToggle"><span>✎ Edit CV</span></button>
       <button class="mini-btn sparkle-btn" id="saveCV" style="display:none"><span>💾 Save</span></button>
       <button class="mini-btn sparkle-btn" id="exportCV"><span>⬆ Export</span></button>
-      <label class="mini-btn sparkle-btn" for="importFile"><span>⬇ Import</span></label>
-      <input type="file" id="importFile" accept="application/json" style="display:none">
       <a href="Ayesha_Aqeel_Resume.pdf" download class="mini-btn sparkle-btn"><span>⬇ Download PDF</span></a>
     </div>
     <div class="cv-header">
       <h2 contenteditable="false" id="cvName">Ayesha Aqeel</h2>
       <p contenteditable="false" id="cvRole">Software Engineering Student @ Ibadat International University Islamabad</p>
+      <p><strong>CGPA: 4.0/4.0</strong> | Semester 2</p>
     </div>
     <div class="cv-section">
       <h3>Education</h3>
       <p contenteditable="false" id="cvEducation"><strong>BSE — Ibadat International University Islamabad</strong><br>CGPA: 4.0 | Semester 2 | Expected 2029<br><strong>FSc:</strong> 1015/1200 | <strong>Matric:</strong> 1060/1100</p>
     </div>
     <div class="cv-section">
-      <h3>Certifications</h3>
-      <p contenteditable="false" id="cvCerts">Generative AI: Prompt Engineering (IBM) · Introduction to Software Engineering (IBM) · HTML, CSS & JavaScript (IBM) · Cyber Security Manager (Macquarie University)</p>
+      <h3>Projects</h3>
+      <p contenteditable="false" id="cvProjects">
+        <strong>1. GUI Banking Application</strong> - Java, OOP, Swing<br>
+        <a href="https://github.com/5121325002/banking-System-using-Java-OOP-">github.com/5121325002/banking-System-using-Java-OOP-</a><br><br>
+        <strong>2. Student Record Management</strong> - C++, Data Structures, File Handling<br>
+        <a href="https://github.com/5121325002/Student-Record-Management-system-">github.com/5121325002/Student-Record-Management-system-</a><br><br>
+        <strong>3. Portfolio Website</strong> - HTML, CSS, JavaScript<br>
+        <a href="https://5121325002.github.io/My-Portfolio-/">5121325002.github.io/My-Portfolio-</a>
+      </p>
+    </div>
+    <div class="cv-section">
+      <h3>Technical Skills</h3>
+      <p contenteditable="false" id="cvSkills"><strong>Languages:</strong> Java, C++, HTML, CSS, JavaScript, SQL<br>
+      <strong>Concepts:</strong> OOP, Data Structures, Algorithms<br>
+      <strong>Tools:</strong> Git, GitHub, VS Code</p>
     </div>
     <div class="cv-section">
       <h3>Contact</h3>
