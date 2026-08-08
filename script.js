@@ -8,11 +8,11 @@ themeToggle.addEventListener('click', () => {
   themeToggle.querySelector('span').textContent = next === 'light'? '☀️' : '🌙';
 });
 
-// CV Modal
+// CV Modal - FIXED class name
 const cvModal = document.getElementById('cvModal');
-document.getElementById('openCV').addEventListener('click', () => cvModal.classList.add('show'));
-document.querySelector('.close-modal').addEventListener('click', () => cvModal.classList.remove('show'));
-cvModal.addEventListener('click', (e) => e.target === cvModal && cvModal.classList.remove('show'));
+document.getElementById('openCV').addEventListener('click', () => cvModal.classList.add('open'));
+document.querySelector('.close-modal').addEventListener('click', () => cvModal.classList.remove('open'));
+cvModal.addEventListener('click', (e) => e.target === cvModal && cvModal.classList.remove('open'));
 
 // CV Edit/Save
 let editing = false;
@@ -53,32 +53,27 @@ window.addEventListener('scroll', () => {
   document.querySelector('.progress-bar').style.width = progress + '%';
 });
 
-// Hide loader
+// Hide loader - FIXED class name
 window.addEventListener('load', () => {
-  setTimeout(() => document.querySelector('.loader').classList.add('fade-out'), 800);
+  setTimeout(() => document.querySelector('.loader').classList.add('hidden'), 800);
 });
 
-// Scroll Reveal
+// Scroll Reveal - FIXED class name
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('show'));
+  entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('visible'));
 }, {threshold: 0.1});
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // Back to top
-document.querySelector('.back-to-top').addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+const backBtn = document.querySelector('.back-to-top');
+window.addEventListener('scroll', () => {
+  backBtn.classList.toggle('show', window.scrollY > 400);
+});
+backBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 
-// Sparkle effect on button click
-document.querySelectorAll('.sparkle-btn').forEach(button => {
-  button.addEventListener('click', function(e) {
-    const rect = button.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const sparkle = document.createElement('span');
-    sparkle.className = 'sparkle-effect';
-    sparkle.style.left = `${x}px`;
-    sparkle.style.top = `${y}px`;
-    sparkle.style.width = sparkle.style.height = `${Math.max(rect.width, rect.height)}px`;
-    button.appendChild(sparkle);
-    setTimeout(() => sparkle.remove(), 600);
-  });
+// Mouse glow effect
+document.addEventListener('mousemove', (e) => {
+  const glow = document.querySelector('.mouse-glow');
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
 });
