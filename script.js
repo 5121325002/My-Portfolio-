@@ -8,7 +8,7 @@ themeToggle.addEventListener('click', () => {
   themeToggle.querySelector('span').textContent = next === 'light'? '☀️' : '🌙';
 });
 
-// CV Modal - FIXED class name
+// CV Modal
 const cvModal = document.getElementById('cvModal');
 document.getElementById('openCV').addEventListener('click', () => cvModal.classList.add('open'));
 document.querySelector('.close-modal').addEventListener('click', () => cvModal.classList.remove('open'));
@@ -36,7 +36,8 @@ document.getElementById('exportCV').addEventListener('click', () => {
     name: document.getElementById('cvName').innerText,
     role: document.getElementById('cvRole').innerText,
     education: document.getElementById('cvEducation').innerText,
-    certs: document.getElementById('cvCerts').innerText,
+    projects: document.getElementById('cvProjects').innerText,
+    skills: document.getElementById('cvSkills').innerText,
     contact: document.getElementById('cvContact').innerText
   };
   const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
@@ -53,12 +54,12 @@ window.addEventListener('scroll', () => {
   document.querySelector('.progress-bar').style.width = progress + '%';
 });
 
-// Hide loader - FIXED class name
+// Hide loader
 window.addEventListener('load', () => {
   setTimeout(() => document.querySelector('.loader').classList.add('hidden'), 800);
 });
 
-// Scroll Reveal - FIXED class name
+// Scroll Reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('visible'));
 }, {threshold: 0.1});
@@ -71,7 +72,7 @@ window.addEventListener('scroll', () => {
 });
 backBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 
-// Mouse glow effect
+// Mouse glow
 document.addEventListener('mousemove', (e) => {
   const glow = document.querySelector('.mouse-glow');
   glow.style.left = e.clientX + 'px';
